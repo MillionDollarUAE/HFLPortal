@@ -5,13 +5,14 @@
  */
 
 /* ============================================================
-   PILLAR DATA
+   PILLAR DATA  (enriched from HFL.md strategy document)
    ============================================================ */
 const PILLARS = [
   {
     id: 1,
     title: 'Electrification & Grid Automation',
-    desc: 'Advanced energy management systems for the modern smart grid. We deliver intelligent control, real-time monitoring, and automated switching solutions that maximise efficiency and reliability across transmission and distribution networks.',
+    desc: 'HFL\'s core competence — building a digital grid ecosystem comparable to ABB and Netcontrol. We deliver smart substations with GIS & E-House architecture, SCADA + OMS + DER Monitoring, LOD/BIM-enabled digital twins (LOD 100–500), asset health monitoring with AI/ML, and GIS spatial intelligence. Every substation is modelled from cable trays and switchgear through to control-room ergonomics. Live data bridges BIM, SCADA telemetry, and predictive reliability models in a single digital thread.',
+    tags: ['SCADA / DERMS', 'Digital Twin', 'Smart Substations', 'OT Cyber', 'GIS Integration'],
     icon: `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
              <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
            </svg>`,
@@ -19,7 +20,8 @@ const PILLARS = [
   {
     id: 2,
     title: 'Digital Engineering & Smart Infrastructure',
-    desc: 'Designing the backbone of resilient urban and industrial environments. Our digital-twin-driven approach integrates BIM, IoT sensors, and AI analytics to create infrastructure that is adaptive, sustainable, and future-proof.',
+    desc: 'Smart, safe, sustainable business parks, industrial townships, and campus electrification — executed entirely on a digital thread. Every project progresses from LOD 200 planning through LOD 400 execution to LOD 500 as-built handover. Capabilities include BIM-led construction, digital procurement & logistics, automated commissioning logs, O&M data fed back to the living BIM model, and EPC+Digital Twin end-to-end delivery. Target segments: smart campuses, substations, logistics hubs, education infrastructure, and defence estates.',
+    tags: ['BIM LOD 200–500', 'EPC + Digital Twin', 'Smart Campus', 'Digital Commissioning', 'O&M Analytics'],
     icon: `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
            </svg>`,
@@ -27,7 +29,8 @@ const PILLARS = [
   {
     id: 3,
     title: 'Advanced Cyber-Physical Systems',
-    desc: 'Secure integration of digital control with physical operational technology. We architect zero-trust OT/IT convergence solutions that protect critical assets while enabling unprecedented visibility and responsiveness.',
+    desc: 'A full enterprise-grade ICS/OT security stack — built to protect power grids, industrial MES, smart buildings, telecom cores, and space command systems. The stack spans Zero-Trust (ZTNA), OT/ICS Cybersecurity, IoTSP/ICTSP integration, endpoint detection & response (EDR), SIEM + AI threat hunting, and identity & device trust frameworks. HFL operates a national-grade OT-SOC (Build-Operate-Transfer model) and can execute sovereign ICS/SCADA conformance audits for government ministries and utilities.',
+    tags: ['Zero Trust / ZTNA', 'OT-SOC', 'ICS/SCADA Security', 'AI Threat Hunting', 'IoT Trust'],
     icon: `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>
            </svg>`,
@@ -35,7 +38,8 @@ const PILLARS = [
   {
     id: 4,
     title: 'Industrial 4.0 / 5.0 Manufacturing',
-    desc: 'Pioneering cognitive manufacturing and human-robot collaboration. From digital shopfloors to autonomous quality control, we transform production facilities into intelligent, self-optimising ecosystems.',
+    desc: 'HFL is positioned as a Digital Factory Systems Integrator sitting between robots, PLCs, sensors, SCADA, predictive maintenance AI, and MES. Target sectors include automotive components, aerospace machining, electrical switchgear, pharma, agri-processing, and packaging. The MVP stack covers industrial IoT sensor retrofit (IoTSP/ICTSP), AI quality-inspection vision modules, predictive maintenance inference engines, MES-Lite scheduling, and PLC/robot upgrade bundles across Siemens S7, Mitsubishi Q/L, and Schneider Modicon ecosystems.',
+    tags: ['Digital Factory', 'Predictive Maintenance AI', 'Robotics & Cobots', 'MES / SCADA', 'Vision AI QC'],
     icon: `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
              <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
            </svg>`,
@@ -43,7 +47,8 @@ const PILLARS = [
   {
     id: 5,
     title: 'EdTech & Capability Building',
-    desc: 'Training the next generation of engineers for the energy transition. Our immersive simulation platforms, micro-credentials, and knowledge transfer programmes upskill workforces at the pace the industry demands.',
+    desc: 'Closing the critical skills gap in digital grid, BIM/LOD, OT cybersecurity, and AI for industrial systems. The HFL EdTech platform delivers modular online curriculum linked to career pathways, virtual labs with digital twins, AR/VR VARK learning, and industry certifications (AI, Agentic AI, ML, IML) with blockchain-accredited badges. Partnerships span OEMs, SIs, MSMEs, Governments, Academia, Corporate, and Freelance ecosystems. HFL EdTech operates as a regulated competency authority — licensing content to national training academies and credentialing audit services.',
+    tags: ['Digital Twin Labs', 'VR/AR Simulation', 'Certified Credentials', 'National Licensing', 'Workforce Upskilling'],
     icon: `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
            </svg>`,
@@ -51,7 +56,8 @@ const PILLARS = [
   {
     id: 6,
     title: 'Strategic Investment & Holding',
-    desc: 'Fostering innovation through targeted capital and growth partnerships. Our investment arm identifies, funds, and scales high-impact technology ventures that accelerate the global energy and infrastructure transition.',
+    desc: 'HFL\'s IEDM cell operates a "Strategic Sovereign Systems Fund" — a phygital holding structure spanning 9 licensed investment categories (6499xxx codes): Outer Space Projects, Technological Enterprises, Commercial & Industrial Enterprises, Agricultural IoT, Oil & Gas Digitalization, Sport Tech, Water Infrastructure, and Retail. The fund acquires utility cyber startups, AI/physics simulation IP, and aerospace robotics ventures — then back-integrates every acquisition into EPC, MFAP, and SCADA delivery pipelines to accelerate NAV accretion.',
+    tags: ['HoldCo Structure', 'Sovereign Fund', 'Tech Ventures', '6499xxx Categories', 'IP Acquisition'],
     icon: `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
              <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
            </svg>`,
@@ -59,7 +65,8 @@ const PILLARS = [
   {
     id: 7,
     title: 'Mobility & Logistics Tech',
-    desc: 'Smart logistics solutions for a globalized supply chain. We integrate autonomous vehicles, predictive routing, and real-time asset tracking to eliminate friction from end-to-end goods movement.',
+    desc: 'End-to-end mobility across land, air, rail, river, sea, and subsea — fully integrated with the HFL digital backbone. The stack covers EV charging + microgrid integration, Intelligent Transport Systems (ITS), EV telematics & OTA updates, eVTOL readiness, rail traction digital systems, autonomous navigation, and subsea/urban air mobility protocols. Extensions include rail telemetry, marine propulsion analytics, electric tug protocols, and river freight optimisation — opening India Inland Waterways, UAE Marine, and Canada Arctic Shipping corridors.',
+    tags: ['EV + Charging Infra', 'ITS / Smart Roads', 'Rail SCADA', 'eVTOL Readiness', 'Marine & Subsea'],
     icon: `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
              <path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
            </svg>`,
@@ -67,7 +74,8 @@ const PILLARS = [
   {
     id: 8,
     title: 'Outer Space Systems',
-    desc: 'Extending engineering excellence to orbital and extraterrestrial frontiers. We design power, communications, and control systems for satellite constellations, orbital platforms, and beyond-LEO missions.',
+    desc: 'Extending HFL\'s engineering excellence to orbital and extraterrestrial frontiers. Offerings include launch support software, satellite communication systems, space data analytics platforms, orbital robotics, and earth observation for industrial intelligence. Space integrates back to grid and mobility — providing LEO-based IoT connectivity, satellite-assisted remote commissioning, GNSS-based micro-synchronization for grid frequency stability, LEO SCADA failover channels, and predictive weather-impact modelling for utility grids. Sell channels: national space agencies, ministries, and aerospace primes.',
+    tags: ['LEO IoT Connectivity', 'Satellite Telemetry', 'Earth Observation AI', 'Grid Frequency Sync', 'Orbital Robotics'],
     icon: `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/>
              <path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/>
@@ -77,7 +85,8 @@ const PILLARS = [
   {
     id: 9,
     title: 'Global Enterprise Execution',
-    desc: 'Delivering complex multi-geography projects with world-class operational precision. Our PMO infrastructure, digital command centres, and global delivery network ensure every project is on time, on budget, and exceptional.',
+    desc: 'HFL\'s UAE & Global Trade Execution model powers delivery across UAE, India, Canada, GCC, Americas, Europe, and APAC. The tri-continent engine runs on: UAE (premium EPC + sovereign cyber mandates), India (manufacturing volume + talent base), and Canada (nuclear, space, aerospace R&D). Each geography has dedicated incorporation models — LLC/Free zone, local certification, OEM partnerships, and SME micro-innovation hubs. The group operates on a tiered delivery model: Strategic R&D HQ → Regional execution hubs → Local service & support.',
+    tags: ['UAE / GCC Delivery', 'India Engineering Hub', 'Canada R&D', 'SME Frameworks', 'Sovereign Contracts'],
     icon: `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
@@ -196,6 +205,15 @@ function openModal(pillar) {
   modalIcon.innerHTML  = pillar.icon;
   modalTitle.textContent = pillar.title;
   modalDesc.textContent  = pillar.desc;
+  // render tags
+  const tagsEl = document.getElementById('modal-tags');
+  if (tagsEl && pillar.tags && pillar.tags.length) {
+    tagsEl.innerHTML = pillar.tags
+      .map(t => `<span class="modal-tag">${t}</span>`)
+      .join('');
+  } else if (tagsEl) {
+    tagsEl.innerHTML = '';
+  }
   modal.removeAttribute('aria-hidden');
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
