@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0059b2",
+              "background-light": "#f5f7f8",
+              "background-dark": "#0f1923",
+              "neutral-subtle": "#1a2a3a",
+              "neutral-border": "#2e4d6b",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Header / Nav -->
+<header class="sticky top-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between border-b border-neutral-border/30">
+<div class="flex items-center gap-3">
+<div class="bg-primary flex items-center justify-center rounded-lg size-10 text-white">
+<span class="material-symbols-outlined">account_tree</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">HFL</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary dark:text-blue-400">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-transparent text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="@container">
+<div class="relative min-h-[520px] flex flex-col items-start justify-end px-6 pb-16 pt-32 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent z-10"></div>
+<img alt="Hero Background" class="w-full h-full object-cover" data-alt="High-tech glowing digital power grid infrastructure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqZLV4Nk8N_bT-RKYwN0LrwFuhpKACJka1CNFEWvTFtqlbM3aDC-Q8a_9pK0iDpTlCFOs9jUDJ_NnCyizxwYeG2ySGWEXyvDl0A6srXDjMD_iKIFHdVbFCNNQFNhY6-hSjYtetNAIt_JLzrDxzxPy7Tr45VU9_02fQF9VqUWUbuAw8PiXTrwUBzbQjMyrf6DWcS8WBXF7hiKvb2HGJVoHkKVz3muyA-58HRVFBbBZDIPirHGbHnQfvgfjoWIgxmUKTl588qOQNeIE"/>
+</div>
+<div class="relative z-20 max-w-2xl flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 px-3 py-1 rounded-full text-primary dark:text-blue-400 text-xs font-bold uppercase tracking-wider">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Next-Gen Infrastructure
+                    </div>
+<h1 class="text-white text-4xl font-black leading-tight tracking-tight @[480px]:text-6xl">
+                        Grid Automation &amp; <br/><span class="text-primary">Critical Infrastructure</span>
+</h1>
+<p class="text-slate-300 text-lg font-normal leading-relaxed max-w-lg">
+                        Leading the future of high-tech infrastructure and smart grid solutions. We empower global enterprises with resilient, digital-first energy systems.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-full h-12 px-6 bg-primary text-white text-base font-bold transition-all hover:bg-primary/90">
+                            Explore Solutions
+                        </button>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-full h-12 px-6 bg-white/10 backdrop-blur-md border border-white/20 text-white text-base font-bold transition-all hover:bg-white/20">
+                            Our Vision
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Strategic Pillars Section -->
+<section class="py-16 px-6 max-w-7xl mx-auto">
+<div class="flex flex-col mb-12">
+<h2 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight tracking-tight mb-4">Strategic Pillars</h2>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+<p class="mt-6 text-slate-600 dark:text-slate-400 max-w-2xl text-lg">
+                    Our diversified portfolio drives innovation across critical sectors, ensuring a sustainable and connected future.
+                </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Pillar 1 -->
+<div class="group flex flex-col gap-4 rounded-2xl border border-neutral-border/20 bg-white dark:bg-neutral-subtle p-6 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 cursor-pointer">
+<div class="bg-primary/10 text-primary rounded-xl size-14 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Electrification &amp; Grid Automation</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Advanced energy management systems for the modern smart grid.</p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="group flex flex-col gap-4 rounded-2xl border border-neutral-border/20 bg-white dark:bg-neutral-subtle p-6 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 cursor-pointer">
+<div class="bg-primary/10 text-primary rounded-xl size-14 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">domain</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Digital Engineering &amp; Smart Infrastructure</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Designing the backbone of resilient urban and industrial environments.</p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="group flex flex-col gap-4 rounded-2xl border border-neutral-border/20 bg-white dark:bg-neutral-subtle p-6 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 cursor-pointer">
+<div class="bg-primary/10 text-primary rounded-xl size-14 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">shield_lock</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Advanced Cyber-Physical Systems</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Secure integration of digital control with physical operational technology.</p>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="group flex flex-col gap-4 rounded-2xl border border-neutral-border/20 bg-white dark:bg-neutral-subtle p-6 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 cursor-pointer">
+<div class="bg-primary/10 text-primary rounded-xl size-14 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">factory</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Industrial 4.0/5.0 Manufacturing</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Pioneering cognitive manufacturing and human-robot collaboration.</p>
+</div>
+</div>
+<!-- Pillar 5 -->
+<div class="group flex flex-col gap-4 rounded-2xl border border-neutral-border/20 bg-white dark:bg-neutral-subtle p-6 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 cursor-pointer">
+<div class="bg-primary/10 text-primary rounded-xl size-14 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">EdTech &amp; Capability Building</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Training the next generation of engineers for the energy transition.</p>
+</div>
+</div>
+<!-- Pillar 6 -->
+<div class="group flex flex-col gap-4 rounded-2xl border border-neutral-border/20 bg-white dark:bg-neutral-subtle p-6 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 cursor-pointer">
+<div class="bg-primary/10 text-primary rounded-xl size-14 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">account_balance</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Strategic Investment &amp; Holding</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Fostering innovation through targeted capital and growth partnerships.</p>
+</div>
+</div>
+<!-- Pillar 7 -->
+<div class="group flex flex-col gap-4 rounded-2xl border border-neutral-border/20 bg-white dark:bg-neutral-subtle p-6 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 cursor-pointer">
+<div class="bg-primary/10 text-primary rounded-xl size-14 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Mobility &amp; Logistics Tech</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Smart logistics solutions for a globalized supply chain.</p>
+</div>
+</div>
+<!-- Pillar 8 -->
+<div class="group flex flex-col gap-4 rounded-2xl border border-neutral-border/20 bg-white dark:bg-neutral-subtle p-6 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 cursor-pointer">
+<div class="bg-primary/10 text-primary rounded-xl size-14 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">rocket_launch</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Outer Space Systems</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Extending engineering excellence to orbital and extraterrestrial frontiers.</p>
+</div>
+</div>
+<!-- Pillar 9 -->
+<div class="group flex flex-col gap-4 rounded-2xl border border-neutral-border/20 bg-white dark:bg-neutral-subtle p-6 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 cursor-pointer">
+<div class="bg-primary/10 text-primary rounded-xl size-14 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">public</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Global Enterprise Execution</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Delivering complex projects with world-class operational precision.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About HFL Section -->
+<section class="py-20 bg-primary/5 border-y border-neutral-border/10">
+<div class="px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="order-2 lg:order-1">
+<img alt="HFL Mission" class="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500" data-alt="Modern corporate glass building reflecting the sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0n46xvmv_KcGK6Fx6fPJms-6-j--UG9vcXmXoNVJ4r4sd4gYD-F6eLjSIRt_piscc18otzLi1wHUJa3nHP09ZSpSMeCuBlM5qvq0ibA0NbcHOdKlizfJ5VRfmNw5x_vcBB13j6AP3zCaHIamx0OZZYAbLbHqKQ5PYARCOKn5qLXbu9waZpqY8Tl9CVrT1H60bkhOnOo-xQp0aVIPqjuMo6Hl-uZkVkNgyyDyzU2pAG53TblAIXk6TRqwGTvconZP2NLPe0z3EfLY"/>
+</div>
+<div class="order-1 lg:order-2 flex flex-col gap-6">
+<h2 class="text-slate-900 dark:text-white text-3xl font-bold">About HFL</h2>
+<p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+                        HFL is a global leader in high-tech critical infrastructure. We are on a mission to redefine excellence in grid automation and smart systems, competing at the highest levels with industry giants like ABB and Netcontrol.
+                    </p>
+<p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+                        Our approach combines deep engineering expertise with the latest in digital innovation, ensuring that we don't just solve today's infrastructure challenges, but anticipate tomorrow's needs.
+                    </p>
+<div class="flex gap-4 mt-4">
+<div class="flex flex-col">
+<span class="text-3xl font-black text-primary">15+</span>
+<span class="text-sm text-slate-500">Countries Active</span>
+</div>
+<div class="w-px h-12 bg-neutral-border/30"></div>
+<div class="flex flex-col">
+<span class="text-3xl font-black text-primary">500+</span>
+<span class="text-sm text-slate-500">Experts</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-16 px-6">
+<div class="max-w-7xl mx-auto rounded-3xl bg-primary p-8 lg:p-16 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 size-96 bg-white/10 rounded-full blur-3xl"></div>
+<h2 class="text-3xl lg:text-5xl font-black mb-6 relative z-10">Ready to automate your future?</h2>
+<p class="text-blue-100 text-lg lg:text-xl max-w-2xl mx-auto mb-10 relative z-10">
+                    Connect with our technical consultants to discover how HFL can transform your critical infrastructure today.
+                </p>
+<button class="relative z-10 px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-blue-50 transition-colors">
+                    Contact Our Team
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-16 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="bg-primary flex items-center justify-center rounded-lg size-8 text-white">
+<span class="material-symbols-outlined text-xl">account_tree</span>
+</div>
+<h2 class="text-white text-2xl font-bold tracking-tight">HFL</h2>
+</div>
+<p class="text-sm">Innovating the world's most critical infrastructures with precision and digital intelligence.</p>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Sectors</h4>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Grid Automation</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Smart Cities</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Space Tech</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Digital Twins</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Company</h4>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Get In Touch</h4>
+<div class="flex flex-col gap-4 text-sm">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>100 Innovation Plaza, Tech District<br/>London, United Kingdom</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>+44 20 7946 0123</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between gap-6 text-xs uppercase tracking-widest">
+<p>© 2024 HFL Engineering Solutions. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Nav Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 flex items-center bg-background-light dark:bg-background-dark/95 backdrop-blur-md px-4 pb-3 pt-2 border-t border-neutral-border/30 md:hidden">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Pillars</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">info</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">About</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">mail</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Contact</p>
+</a>
+</div>
+<!-- Padding for mobile nav -->
+<div class="h-16 md:hidden"></div>
+</body></html>
