@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HFL — Grid Automation & Critical Infrastructure</title>
+  <title>AHFL — Enterprise Architecture Portal</title>
   <meta name="description"
-    content="HFL is a global leader in high-tech critical infrastructure. Discover our 9 strategic pillars driving innovation across critical sectors." />
-  <meta name="theme-color" content="#0a1628" />
+    content="AHFL Global Enterprise Ecosystem — Two Jurisdictions. One Enterprise Ecosystem. Investment, Enterprise Development, Technology, Industrialisation & Digital Infrastructure." />
+  <meta name="theme-color" content="#060b14" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="HFL — Grid Automation & Critical Infrastructure" />
-  <meta property="og:description" content="Leading the future of high-tech infrastructure and smart grid solutions." />
+  <meta property="og:title" content="AHFL — Enterprise Architecture Portal" />
+  <meta property="og:description"
+    content="AJAN HFL Global Investment: Dual-Jurisdiction Global Infrastructure & Technology Ecosystem." />
   <meta property="og:type" content="website" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
 
   <!-- Stylesheet -->
@@ -33,38 +35,84 @@
   <div class="wrapper">
 
     <!-- ============================================
+         PERSISTENT SUB-DOMAIN TOP BAR
+    ============================================= -->
+    <aside class="subdomain-bar" id="subdomainBar" aria-label="Subdomain and Ecosystem Navigation">
+      <div class="subdomain-meta">
+        <span class="parent-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="10" />
+          </svg>
+          AHFL Group Parent Portal
+        </span>
+        <span class="text-muted">Dual-Jurisdiction: Canada 🇨🇦 &amp; India 🇮🇳 | Global Hubs: UAE 🇦🇪, USA 🇺🇸, Saudi Arabia 🇸🇦</span>
+      </div>
+      <div class="subdomain-links">
+        <a href="index.html" class="subdomain-link active" title="Current: AHFL Parent Portal">
+          🌐 portal.ahfl.com
+        </a>
+        <a href="ams/index.html" class="subdomain-link subdomain-cta" title="Switch to AMS Sub-Domain Portal">
+          ⚡ ams.ahfl.com (AMS Electronics) &rarr;
+        </a>
+      </div>
+    </aside>
+
+    <!-- ============================================
          NAVBAR
     ============================================= -->
     <header class="navbar" id="navbar">
-      <a href="#" class="nav-brand" aria-label="HFL Home">
-        <div class="nav-logo" aria-hidden="true">
-          <!-- HFL logo mark: circuit / grid tree SVG -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path
-              d="M12 3v4M12 17v4M3 12h4m10 0h4M6.34 6.34l2.83 2.83M14.83 14.83l2.83 2.83M6.34 17.66l2.83-2.83M14.83 9.17l2.83-2.83"
-              stroke="white" stroke-width="2" stroke-linecap="round" fill="none" />
+      <a href="index.html" class="nav-brand" aria-label="AHFL Home">
+        <div class="nav-logo-emblem" aria-hidden="true">
+          <!-- Hexagonal circuit node logo -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 2 17 12 22 22 17 22 7 12 2" />
+            <line x1="12" y1="22" x2="12" y2="12" />
+            <line x1="12" y1="12" x2="22" y2="7" />
+            <line x1="12" y1="12" x2="2" y2="7" />
+            <circle cx="12" cy="12" r="2.5" fill="white" />
           </svg>
         </div>
-        <span class="nav-wordmark">HFL</span>
+        <div class="brand-text">
+          <span class="nav-wordmark">AHFL</span>
+          <span class="nav-sub-label">Enterprise Architecture</span>
+        </div>
       </a>
 
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#pillars">Pillars</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#competitive">Positioning</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#hubs" class="nav-link">Global Hubs</a>
+        <a href="#architecture" class="nav-link">Architecture</a>
+        <a href="#dual-jurisdiction" class="nav-link">Dual Jurisdiction</a>
+        <a href="#institutional-tiers" class="nav-link">Institutional Tiers</a>
+        <a href="#platforms" class="nav-link">Platforms</a>
+        <a href="#intelligence" class="nav-link">Strategic Intelligence</a>
+        <a href="ams/index.html" class="nav-link" style="color: var(--cyan); font-weight: 600;">AMS Sub-Domain &nearr;</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="#contact" class="btn-nav-cta">
-          <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12h14M12 5l7 7-7 7" />
+        <!-- External vs Internal Mode Switcher -->
+        <div class="view-mode-pill" title="Toggle between External Functional View and Internal Entity View">
+          <button class="mode-btn active" id="btnModeExternal" onclick="setPortalMode('external')">External</button>
+          <button class="mode-btn" id="btnModeInternal" onclick="setPortalMode('internal')">Internal</button>
+        </div>
+
+        <!-- Light/Dark Toggle -->
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle theme" title="Toggle light/dark theme">
+          <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
           </svg>
-          Get in Touch
-        </a>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+        </button>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open mobile navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -72,799 +120,800 @@
       </div>
     </header>
 
-    <!-- Mobile slide-down menu -->
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-      <a href="#pillars" class="mobile-nav-link">Strategic Pillars</a>
-      <a href="#roadmap" class="mobile-nav-link">3-Horizon Roadmap</a>
-      <a href="#competitive" class="mobile-nav-link">Competitive Positioning</a>
-      <a href="#about" class="mobile-nav-link">About HFL</a>
-      <a href="#contact" class="mobile-nav-link">Contact</a>
-    </nav>
+    <!-- ============================================
+         GLOBAL OPERATING HUBS SELECTOR STRIP
+    ============================================= -->
+    <section class="hubs-header-strip" id="hubs" aria-label="Global Operating Hubs Selector">
+      <div class="hubs-title-row">
+        <div class="hubs-badge">Global Operating Hub Architecture</div>
+        <div class="text-muted" style="font-size: 0.78rem;">
+          Click any hub to load dedicated jurisdiction metrics &amp; operational focus
+        </div>
+      </div>
+      <div class="hubs-grid" id="hubsGrid">
+        <!-- Hub cards rendered dynamically by JS -->
+      </div>
+    </section>
 
+    <!-- ============================================
+         HERO SECTION
+    ============================================= -->
     <main>
-
-      <!-- ============================================
-           HERO SECTION
-      ============================================= -->
-      <section class="hero" id="home" aria-label="Hero">
-        <div class="hero-bg">
-          <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqZLV4Nk8N_bT-RKYwN0LrwFuhpKACJka1CNFEWvTFtqlbM3aDC-Q8a_9pK0iDpTlCFOs9jUDJ_NnCyizxwYeG2ySGWEXyvDl0A6srXDjMD_iKIFHdVbFCNNQFNhY6-hSjYtetNAIt_JLzrDxzxPy7Tr45VU9_02fQF9VqUWUbuAw8PiXTrwUBzbQjMyrf6DWcS8WBXF7hiKvb2HGJVoHkKVz3muyA-58HRVFBbBZDIPirHGbHnQfvgfjoWIgxmUKTl588qOQNeIE"
-            alt="High-tech digital power grid infrastructure" loading="eager" />
+      <section class="hero" id="hero">
+        <div class="hero-jurisdiction-tag" id="heroJurisdictionBadge">
+          <span id="heroJurFlag">🌐</span>
+          <span id="heroJurTitle">AHFL Global Enterprise Ecosystem</span>
         </div>
 
-        <div class="hero-content">
-          <div class="hero-badge animate-in">
-            <span class="badge-dot" aria-hidden="true"></span>
-            Next-Gen Infrastructure
-          </div>
+        <h1 class="hero-title">
+          <span>AJAN HFL GLOBAL INVESTMENT</span>
+        </h1>
 
-          <h1 class="hero-title animate-in animate-in-delay-1">
-            Grid Automation &amp;<br />
-            <span class="highlight">Critical Infrastructure</span>
-          </h1>
-
-          <p class="hero-desc animate-in animate-in-delay-2">
-            Leading the future of high-tech infrastructure and smart grid solutions. We empower global enterprises with
-            resilient, digital-first energy systems.
-          </p>
-
-          <div class="hero-actions animate-in animate-in-delay-3">
-            <a href="#pillars" class="btn-primary">
-              <svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="3" width="7" height="7" rx="1" />
-                <rect x="14" y="3" width="7" height="7" rx="1" />
-                <rect x="3" y="14" width="7" height="7" rx="1" />
-                <rect x="14" y="14" width="7" height="7" rx="1" />
-              </svg>
-              Explore Our Pillars
-            </a>
-            <a href="#about" class="btn-secondary">
-              Our Vision
-              <svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-
-          <div class="hero-stats animate-in animate-in-delay-4">
-            <div class="stat-item">
-              <span class="stat-number" aria-label="15 plus countries active">15+</span>
-              <span class="stat-label">Countries Active</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" aria-label="11 verticals">11</span>
-              <span class="stat-label">Verticals</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" aria-label="3.4 billion USD 5 year revenue target">$3.4B</span>
-              <span class="stat-label">5-yr Revenue Target</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" aria-label="9 strategic pillars">9</span>
-              <span class="stat-label">Strategic Pillars</span>
-            </div>
-          </div>
+        <div class="hero-tagline" id="heroTagline">
+          Two Jurisdictions. One Enterprise Ecosystem.
         </div>
 
-        <!-- Scroll cue -->
-        <div class="scroll-cue" aria-hidden="true">
-          <div class="scroll-arrow">
-            <svg viewBox="0 0 24 24">
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </div>
-          Scroll
+        <p class="hero-sub" id="heroSubtitle">
+          Investment &bull; Enterprise Development &bull; Technology &bull; Industrialisation &bull; Digital Infrastructure
+          <br />
+          <span style="color: var(--cyan); font-weight: 500;">
+            Build &gt; Integrate &gt; Operate &gt; Monetise &mdash; From Market Capture to Lifecycle Monetisation.
+          </span>
+        </p>
+
+        <!-- Dynamic Hero Metrics (per selected Hub) -->
+        <div class="hero-metrics-grid" id="heroMetricsGrid">
+          <!-- Populated by JS based on selected hub -->
         </div>
       </section>
 
       <!-- ============================================
-           STRATEGIC PILLARS SECTION
+           ENTERPRISE ARCHITECTURE CHEVRON SECTION
       ============================================= -->
-      <section class="pillars-section" id="pillars" aria-labelledby="pillars-heading">
-        <div class="container">
-          <div class="section-header reveal">
-            <span class="section-eyebrow">Our Framework</span>
-            <h2 class="section-title" id="pillars-heading">Strategic Pillars</h2>
-            <p class="section-desc">
-              Our diversified portfolio drives innovation across 9 critical sectors — from grid automation and space
-              systems to EdTech and sovereign investment. Click any pillar to explore its full capability stack.
-            </p>
+      <section class="section-container" id="architecture">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Enterprise Architecture &amp; Execution Model</h2>
+            <p class="section-subtitle">Integrated Platform. End-to-End Value. Measurable Impact.</p>
           </div>
+          <div class="view-toggle-btns">
+            <button class="toggle-btn active" id="btnArchView" onclick="setArchitectureView('arch')">Architecture View</button>
+            <button class="toggle-btn" id="btnExecView" onclick="setArchitectureView('exec')">Execution View</button>
+          </div>
+        </div>
 
-          <!-- 9 Pillar Tiles -->
-          <div class="pillars-grid" id="pillarsGrid">
+        <!-- Top GRC Banner -->
+        <div class="grc-banner">
+          <div class="grc-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            GRC, RISK &amp; COMPLIANCE FABRIC
+          </div>
+          <div class="grc-badges">
+            <span>Policy</span> &bull;
+            <span>Risk Management</span> &bull;
+            <span>Regulatory Compliance</span> &bull;
+            <span>Audit Trail</span> &bull;
+            <span>Institutional Reporting</span>
+          </div>
+        </div>
 
-            <!-- Pillar 1 -->
-            <button class="pillar-card featured reveal" id="pillar-1" data-pillar="1"
-              aria-label="Explore Electrification & Grid Automation">
-              <span class="pillar-num">01</span>
-              <div class="pillar-icon" aria-hidden="true">
-                <!-- Lightning bolt / power -->
-                <svg viewBox="0 0 24 24">
-                  <path d="M13 2L4.09 12.26a1 1 0 000 1.49L13 22V14h8L11 2v8h2v0z" />
-                  <polyline points="13 2 13 10 21 10" />
-                </svg>
-              </div>
-              <div class="pillar-body">
-                <h3 class="pillar-title">Electrification &amp; Grid Automation</h3>
-                <p class="pillar-desc">Advanced energy management systems for the modern smart grid.</p>
-              </div>
-              <span class="pillar-arrow" aria-hidden="true">
-                Explore
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
+        <!-- 8-Segment Process Chevron Chain -->
+        <div class="chevron-chain-container">
+          <div class="chevron-chain" id="chevronChain">
+            <!-- Step 1: Market Capture -->
+            <div class="chevron-step step-1" onclick="openStepModal('capture')">
+              <div class="chevron-num">01 / Inception</div>
+              <div class="chevron-title">MARKET CAPTURE</div>
+              <div class="chevron-desc">Market Intelligence, Deal Origination &amp; Pipeline</div>
+            </div>
 
-            <!-- Pillar 2 -->
-            <button class="pillar-card reveal" id="pillar-2" data-pillar="2"
-              aria-label="Explore Digital Engineering & Smart Infrastructure">
-              <span class="pillar-num">02</span>
-              <div class="pillar-icon" aria-hidden="true">
-                <!-- City / building -->
-                <svg viewBox="0 0 24 24">
-                  <path d="M3 9l4-4 4 4 4-4 4 4v11H3z" />
-                  <path d="M9 22V12h6v10" />
-                </svg>
-              </div>
-              <div class="pillar-body">
-                <h3 class="pillar-title">Digital Engineering &amp; Smart Infrastructure</h3>
-                <p class="pillar-desc">Designing the backbone of resilient urban and industrial environments.</p>
-              </div>
-              <span class="pillar-arrow" aria-hidden="true">
-                Explore
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
+            <!-- Step 2: EPICC -->
+            <div class="chevron-step step-2" onclick="openStepModal('epicc')">
+              <div class="chevron-num">02 / Contracting</div>
+              <div class="chevron-title">EPICC</div>
+              <div class="chevron-desc">Engineering Project Integration &amp; Commercial Contracting</div>
+            </div>
 
-            <!-- Pillar 3 -->
-            <button class="pillar-card reveal" id="pillar-3" data-pillar="3"
-              aria-label="Explore Advanced Cyber-Physical Systems">
-              <span class="pillar-num">03</span>
-              <div class="pillar-icon" aria-hidden="true">
-                <!-- Shield lock -->
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  <path d="M9 12l2 2 4-4" />
-                </svg>
-              </div>
-              <div class="pillar-body">
-                <h3 class="pillar-title">Advanced Cyber-Physical Systems</h3>
-                <p class="pillar-desc">Secure integration of digital control with physical operational technology.</p>
-              </div>
-              <span class="pillar-arrow" aria-hidden="true">
-                Explore
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
+            <!-- Step 3: S.I. -->
+            <div class="chevron-step step-3" onclick="openStepModal('si')">
+              <div class="chevron-num">03 / Integration</div>
+              <div class="chevron-title">SYSTEM INTEGRATOR</div>
+              <div class="chevron-desc">EPC / EPCM Program Management &amp; Automation</div>
+            </div>
 
-            <!-- Pillar 4 -->
-            <button class="pillar-card reveal" id="pillar-4" data-pillar="4"
-              aria-label="Explore Industrial 4.0/5.0 Manufacturing">
-              <span class="pillar-num">04</span>
-              <div class="pillar-icon" aria-hidden="true">
-                <!-- Factory / gears -->
-                <svg viewBox="0 0 24 24">
-                  <path d="M2 20V10l6-4 4 3 5-5 5 5V20z" />
-                  <path d="M10 20v-6h4v6" />
-                  <circle cx="7" cy="14" r="1.5" />
-                  <circle cx="17" cy="14" r="1.5" />
-                </svg>
-              </div>
-              <div class="pillar-body">
-                <h3 class="pillar-title">Industrial 4.0 / 5.0 Manufacturing</h3>
-                <p class="pillar-desc">Pioneering cognitive manufacturing and human-robot collaboration.</p>
-              </div>
-              <span class="pillar-arrow" aria-hidden="true">
-                Explore
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
+            <!-- Step 4: OEM / SI -->
+            <div class="chevron-step step-4" onclick="openStepModal('oem')">
+              <div class="chevron-num">04 / Ecosystem</div>
+              <div class="chevron-title">OEM / SI PARTNERS</div>
+              <div class="chevron-desc">Strategic OEMs &amp; Manufacturing Supply Chain</div>
+            </div>
 
-            <!-- Pillar 5 -->
-            <button class="pillar-card reveal" id="pillar-5" data-pillar="5"
-              aria-label="Explore EdTech & Capability Building">
-              <span class="pillar-num">05</span>
-              <div class="pillar-icon" aria-hidden="true">
-                <!-- Graduation cap -->
-                <svg viewBox="0 0 24 24">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
-                </svg>
-              </div>
-              <div class="pillar-body">
-                <h3 class="pillar-title">EdTech &amp; Capability Building</h3>
-                <p class="pillar-desc">Training the next generation of engineers for the energy transition.</p>
-              </div>
-              <span class="pillar-arrow" aria-hidden="true">
-                Explore
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
+            <!-- Step 5: MFAP -->
+            <div class="chevron-step step-5" onclick="openStepModal('mfap')">
+              <div class="chevron-num">05 / Production</div>
+              <div class="chevron-title">MFAP</div>
+              <div class="chevron-desc">Manufacturing Fulfilment &amp; Assembly Platform</div>
+            </div>
 
-            <!-- Pillar 6 -->
-            <button class="pillar-card reveal" id="pillar-6" data-pillar="6"
-              aria-label="Explore Strategic Investment & Holding">
-              <span class="pillar-num">06</span>
-              <div class="pillar-icon" aria-hidden="true">
-                <!-- Bank / investment -->
-                <svg viewBox="0 0 24 24">
-                  <path d="M3 22h18M3 10h18M5 10V22M19 10v12M8 10V22M16 10v12" />
-                  <path d="M3 10l9-7 9 7" />
-                </svg>
-              </div>
-              <div class="pillar-body">
-                <h3 class="pillar-title">Strategic Investment &amp; Holding</h3>
-                <p class="pillar-desc">Fostering innovation through targeted capital and growth partnerships.</p>
-              </div>
-              <span class="pillar-arrow" aria-hidden="true">
-                Explore
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
+            <!-- Step 6: Software -->
+            <div class="chevron-step step-6" onclick="openStepModal('software')">
+              <div class="chevron-num">06 / Intelligence</div>
+              <div class="chevron-title">SOFTWARE &amp; DATA</div>
+              <div class="chevron-desc">Applications, AI/ML Intelligence &amp; Digital Twins</div>
+            </div>
 
-            <!-- Pillar 7 -->
-            <button class="pillar-card reveal" id="pillar-7" data-pillar="7"
-              aria-label="Explore Mobility & Logistics Tech">
-              <span class="pillar-num">07</span>
-              <div class="pillar-icon" aria-hidden="true">
-                <!-- Truck / logistics -->
-                <svg viewBox="0 0 24 24">
-                  <path d="M1 3h15v13H1z" />
-                  <path d="M16 8h4l3 3v5h-7V8z" />
-                  <circle cx="5.5" cy="18.5" r="2.5" />
-                  <circle cx="18.5" cy="18.5" r="2.5" />
-                </svg>
-              </div>
-              <div class="pillar-body">
-                <h3 class="pillar-title">Mobility &amp; Logistics Tech</h3>
-                <p class="pillar-desc">Smart logistics solutions for a globalized supply chain.</p>
-              </div>
-              <span class="pillar-arrow" aria-hidden="true">
-                Explore
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
+            <!-- Step 7: LCS / LCM -->
+            <div class="chevron-step step-7" onclick="openStepModal('lcs')">
+              <div class="chevron-num">07 / Lifecycle</div>
+              <div class="chevron-title">LCS / LCM</div>
+              <div class="chevron-desc">Lifecycle Services, O&amp;M &amp; System Upgrades</div>
+            </div>
 
-            <!-- Pillar 8 -->
-            <button class="pillar-card reveal" id="pillar-8" data-pillar="8" aria-label="Explore Outer Space Systems">
-              <span class="pillar-num">08</span>
-              <div class="pillar-icon" aria-hidden="true">
-                <!-- Rocket -->
-                <svg viewBox="0 0 24 24">
-                  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z" />
-                  <path
-                    d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z" />
-                  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M15 12v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-                </svg>
-              </div>
-              <div class="pillar-body">
-                <h3 class="pillar-title">Outer Space Systems</h3>
-                <p class="pillar-desc">Extending engineering excellence to orbital and extraterrestrial frontiers.</p>
-              </div>
-              <span class="pillar-arrow" aria-hidden="true">
-                Explore
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
+            <!-- Step 8: GBOS -->
+            <div class="chevron-step step-8" onclick="openStepModal('gbos')">
+              <div class="chevron-num">08 / Monetise</div>
+              <div class="chevron-title">GBOS</div>
+              <div class="chevron-desc">Global Business Operations &amp; Recurring Monetisation</div>
+            </div>
+          </div>
+        </div>
 
-            <!-- Pillar 9 -->
-            <button class="pillar-card featured reveal" id="pillar-9" data-pillar="9"
-              aria-label="Explore Global Enterprise Execution">
-              <span class="pillar-num">09</span>
-              <div class="pillar-icon" aria-hidden="true">
-                <!-- Globe -->
-                <svg viewBox="0 0 24 24">
+        <!-- Technology Platform Architecture Strip -->
+        <div class="tech-platform-strip">
+          <div class="tech-platform-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+            </svg>
+            TECHNOLOGY PLATFORM ARCHITECTURE
+          </div>
+          <div class="tech-platform-tags">
+            <span class="tech-tag">Cloud Fabric</span>
+            <span class="tech-tag">Data Fabric (SCADA / MES / ERP)</span>
+            <span class="tech-tag">Agentic AI &amp; GenAI</span>
+            <span class="tech-tag">SOC / SIEM Security</span>
+            <span class="tech-tag">Blockchain Verification</span>
+            <span class="tech-tag">Observability</span>
+            <span class="tech-tag">Interoperability</span>
+          </div>
+        </div>
+
+        <!-- Unified Execution Flow -->
+        <div class="execution-flow-bar">
+          <span class="flow-title">UNIFIED EXECUTION FLOW &rsaquo;</span>
+          <div class="flow-stages">
+            <span class="flow-stage">Lead</span>
+            <span class="flow-arrow">&rarr;</span>
+            <span class="flow-stage">Design</span>
+            <span class="flow-arrow">&rarr;</span>
+            <span class="flow-stage">Build</span>
+            <span class="flow-arrow">&rarr;</span>
+            <span class="flow-stage">Integrate</span>
+            <span class="flow-arrow">&rarr;</span>
+            <span class="flow-stage">Deploy</span>
+            <span class="flow-arrow">&rarr;</span>
+            <span class="flow-stage">Operate</span>
+            <span class="flow-arrow">&rarr;</span>
+            <span class="flow-stage">Optimise</span>
+            <span class="flow-arrow">&rarr;</span>
+            <span class="flow-stage" style="color: var(--emerald);">Monetise</span>
+          </div>
+        </div>
+
+        <!-- Dual Jurisdiction & Core Platforms Panels -->
+        <div class="two-col-grid" id="dual-jurisdiction">
+          <!-- Dual Jurisdiction Model -->
+          <div class="panel-box">
+            <div class="panel-header">
+              <h3 class="panel-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2">
                   <circle cx="12" cy="12" r="10" />
                   <line x1="2" y1="12" x2="22" y2="12" />
-                  <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                 </svg>
+                Dual-Jurisdiction Model: One Enterprise
+              </h3>
+              <span class="entity-code-badge">HOLDING &bull; EXECUTION</span>
+            </div>
+            <div class="jurisdiction-cards">
+              <!-- Canada Entity -->
+              <div class="jurisdiction-card">
+                <div class="jur-header">
+                  <span class="jur-flag">🇨🇦</span>
+                  <div>
+                    <div class="jur-name">AHFL Canada</div>
+                    <div class="text-muted" style="font-size: 0.7rem;">Holding &amp; Governance</div>
+                  </div>
+                </div>
+                <ul class="jur-list">
+                  <li>Corporate HQ &amp; Global Governance</li>
+                  <li>Capital Formation &amp; Investor Interface</li>
+                  <li>IP Holding &amp; Global Technology Licenses</li>
+                  <li>AI &amp; Digital Twin Centre of Excellence</li>
+                  <li>Global Multi-Country Contracts</li>
+                </ul>
+                <div class="jur-currency">Primary: USD / CAD Reporting</div>
               </div>
-              <div class="pillar-body">
-                <h3 class="pillar-title">Global Enterprise Execution</h3>
-                <p class="pillar-desc">Delivering complex projects with world-class operational precision.</p>
+
+              <!-- India Entity -->
+              <div class="jurisdiction-card">
+                <div class="jur-header">
+                  <span class="jur-flag">🇮🇳</span>
+                  <div>
+                    <div class="jur-name">AHFL India</div>
+                    <div class="text-muted" style="font-size: 0.7rem;">Delivery &amp; Operations</div>
+                  </div>
+                </div>
+                <ul class="jur-list">
+                  <li>Execution, Engineering &amp; Delivery Engine</li>
+                  <li>Manufacturing, MFAP &amp; Assembly Platforms</li>
+                  <li>Talent Pipeline &amp; HUMI-ID Academies</li>
+                  <li>Domestic &amp; Regional Asian Markets</li>
+                  <li>MSME &amp; Partner Ecosystem Integration</li>
+                </ul>
+                <div class="jur-currency">Primary: INR (₹ Crore) Reporting</div>
               </div>
-              <span class="pillar-arrow" aria-hidden="true">
-                Explore
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
+            </div>
+          </div>
+
+          <!-- Key Platforms Summary -->
+          <div class="panel-box">
+            <div class="panel-header">
+              <h3 class="panel-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                  <line x1="6" y1="6" x2="6.01" y2="6" />
+                  <line x1="6" y1="18" x2="6.01" y2="18" />
                 </svg>
-              </span>
-            </button>
-
-          </div><!-- /pillars-grid -->
-        </div>
-      </section>
-
-      <!-- ============================================
-           3 HORIZONS ROADMAP
-      ============================================= -->
-      <section class="roadmap-section" id="roadmap" aria-labelledby="roadmap-heading">
-        <div class="container">
-          <div class="section-header reveal">
-            <span class="section-eyebrow">Growth Strategy</span>
-            <h2 class="section-title" id="roadmap-heading">3-Horizon Roadmap</h2>
-            <p class="section-desc">A phased build-out from core grid automation through to a fully integrated global
-              sovereign-systems group.</p>
-          </div>
-
-          <div class="roadmap-track">
-            <div class="horizon-card reveal">
-              <div class="horizon-label">
-                <span class="horizon-badge h1">Horizon 1</span>
-                <span class="horizon-timeline">0 – 18 months</span>
+                Core Technological Platforms
+              </h3>
+              <a href="#platforms" class="text-muted" style="font-size: 0.76rem; text-decoration: none; color: var(--cyan);">View Architecture &rarr;</a>
+            </div>
+            <div class="jurisdiction-cards">
+              <div class="jurisdiction-card" onclick="openPlatformDetail('dem')">
+                <div class="entity-code-badge" style="border-color: #0284c7; color: #38bdf8;">DEM &amp; DAAP</div>
+                <div class="entity-name" style="font-size: 0.9rem;">Digital Engineering &amp; Apps</div>
+                <p class="entity-role">BIM &bull; GIS &bull; LOD &bull; Data Fabric &bull; Digital Twins &bull; SCADA / MES</p>
+                <span class="text-muted" style="font-size: 0.72rem;">Digital Fabric Layer &rarr;</span>
               </div>
-              <h3 class="horizon-title">Foundation</h3>
-              <ul class="horizon-list">
-                <li>Build Grid Automation core (SCADA, Digital Twin, Protection)</li>
-                <li>Establish BIM/LOD 100–500 standards &amp; libraries</li>
-                <li>SCADA/DERMS integration suite</li>
-                <li>OT cybersecurity foundation</li>
-                <li>Hire expert grid, BIM, and AI leadership</li>
-                <li>UAE &amp; India legal incorporation + SME models</li>
-              </ul>
-            </div>
-
-            <div class="roadmap-connector" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </div>
-
-            <div class="horizon-card reveal">
-              <div class="horizon-label">
-                <span class="horizon-badge h2">Horizon 2</span>
-                <span class="horizon-timeline">18 – 36 months</span>
+              <div class="jurisdiction-card" onclick="openPlatformDetail('soc')">
+                <div class="entity-code-badge" style="border-color: #10b981; color: #34d399;">SOC / SIEM</div>
+                <div class="entity-name" style="font-size: 0.9rem;">Cybersecurity Fabric</div>
+                <p class="entity-role">24/7 Monitoring &bull; Threat Hunting &bull; ICS / OT Security &bull; Zero Trust</p>
+                <span class="text-muted" style="font-size: 0.72rem;">Security Fabric Layer &rarr;</span>
               </div>
-              <h3 class="horizon-title">Scale</h3>
-              <ul class="horizon-list">
-                <li>Field deployments across UAE, India, GCC</li>
-                <li>Digital Twin product release &amp; BIM IP licensing</li>
-                <li>AI/ML predictive O&amp;M suite launch</li>
-                <li>Industrial automation &amp; MFAP stack</li>
-                <li>EdTech certifications &amp; national academy licensing</li>
-                <li>Canada operations: aerospace &amp; nuclear-adjacent</li>
-              </ul>
-            </div>
-
-            <div class="roadmap-connector" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </div>
-
-            <div class="horizon-card reveal">
-              <div class="horizon-label">
-                <span class="horizon-badge h3">Horizon 3</span>
-                <span class="horizon-timeline">36 – 60 months</span>
+              <div class="jurisdiction-card" onclick="openPlatformDetail('humi')">
+                <div class="entity-code-badge" style="border-color: #a855f7; color: #c084fc;">HUMI-ID</div>
+                <div class="entity-name" style="font-size: 0.9rem;">Workforce Operating Platform</div>
+                <p class="entity-role">Digital Identity &bull; Skills Passport &bull; Blockchain Credential &bull; Marketplace</p>
+                <span class="text-muted" style="font-size: 0.72rem;">Workforce Layer &rarr;</span>
               </div>
-              <h3 class="horizon-title">Sovereign</h3>
-              <ul class="horizon-list">
-                <li>Fully integrated mobility (EV, eVTOL, Rail, Marine)</li>
-                <li>Space systems + satellite data products launched</li>
-                <li>Global service footprint across 8+ regions</li>
-                <li>OEM ecosystem partnerships &amp; white-label products</li>
-                <li>$3.4B+ revenue across all 11 verticals</li>
-                <li>Valuation target: USD 10–18B+ (sovereign class)</li>
-              </ul>
+              <div class="jurisdiction-card" onclick="openPlatformDetail('si')">
+                <div class="entity-code-badge" style="border-color: #f59e0b; color: #fbbf24;">SYSTEM INTEGRATOR</div>
+                <div class="entity-name" style="font-size: 0.9rem;">Execution &amp; S.I. Engine</div>
+                <p class="entity-role">Smart Grids &bull; DERMS &bull; Substations &bull; Industrial Automation &bull; ESCO</p>
+                <span class="text-muted" style="font-size: 0.72rem;">Execution Fabric Layer &rarr;</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ============================================
-           COMPETITIVE POSITIONING
+           INSTITUTIONAL FUNDING & ENTITY TIERS
+           (EXTERNAL CAPABILITIES VS INTERNAL ENTITIES)
       ============================================= -->
-      <section class="competitive-section" id="competitive" aria-labelledby="competitive-heading">
-        <div class="container">
-          <div class="section-header reveal">
-            <span class="section-eyebrow">Market Position</span>
-            <h2 class="section-title" id="competitive-heading">Competing at the Top</h2>
-            <p class="section-desc">HFL targets the gaps left by incumbents — open APIs, digital-first mandate, ML-first
-              reliability, and full-lifecycle modelling.</p>
+      <section class="section-container" id="institutional-tiers">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">AHFL Institutional Architecture</h2>
+            <p class="section-subtitle" id="tiersSubtitle">
+              External View: Functional Capabilities across Industrial &amp; Digital Tiers
+            </p>
           </div>
-
-          <div class="comp-table-wrap reveal">
-            <table class="comp-table" aria-label="HFL vs Bosch and Netcontrol competitive positioning">
-              <thead>
-                <tr>
-                  <th scope="col">Dimension</th>
-                  <th scope="col">Bosch and Netcontrol</th>
-                  <th scope="col" class="hfl-col">HFL Target</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Grid Automation</td>
-                  <td>Strong RTU / SCADA</td>
-                  <td class="hfl-col"><span class="comp-badge">Global Digital Twin + AI</span></td>
-                </tr>
-                <tr>
-                  <td>Hardware</td>
-                  <td>Legacy PLC + RTU</td>
-                  <td class="hfl-col"><span class="comp-badge">Smart IoT + Cyber-secured</span></td>
-                </tr>
-                <tr>
-                  <td>Software</td>
-                  <td>Proprietary / Closed</td>
-                  <td class="hfl-col"><span class="comp-badge">Hybrid Open + API-First</span></td>
-                </tr>
-                <tr>
-                  <td>Cybersecurity</td>
-                  <td>Basic</td>
-                  <td class="hfl-col"><span class="comp-badge">Enterprise-grade ICS/OT</span></td>
-                </tr>
-                <tr>
-                  <td>Global Presence</td>
-                  <td>Established (legacy)</td>
-                  <td class="hfl-col"><span class="comp-badge">UAE / IN / CA / GCC / EU / US</span></td>
-                </tr>
-                <tr>
-                  <td>Skills &amp; Training</td>
-                  <td>Limited</td>
-                  <td class="hfl-col"><span class="comp-badge">Fully Integrated EdTech</span></td>
-                </tr>
-                <tr>
-                  <td>Mobility</td>
-                  <td>Niche</td>
-                  <td class="hfl-col"><span class="comp-badge">End-to-end: EV / Rail / Air</span></td>
-                </tr>
-                <tr>
-                  <td>Space Systems</td>
-                  <td>None</td>
-                  <td class="hfl-col"><span class="comp-badge">LEO + Satellite Data AI</span></td>
-                </tr>
-                <tr>
-                  <td>Investment Focus</td>
-                  <td>Core Infra Only</td>
-                  <td class="hfl-col"><span class="comp-badge">Tech + Digital + Space + Defence</span></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="view-mode-pill">
+            <button class="mode-btn active" id="btnTierExternal" onclick="setPortalMode('external')">External Capabilities</button>
+            <button class="mode-btn" id="btnTierInternal" onclick="setPortalMode('internal')">Internal Operating Entities</button>
           </div>
+        </div>
 
-          <div class="oem-strip reveal">
-            <p class="oem-label">OEM Ecosystems mapped &amp; addressed:</p>
-            <div class="oem-logos">
-              <span class="oem-tag">Bosch</span>
-              <span class="oem-tag">Siemens</span>
-              <span class="oem-tag">GE</span>
-              <span class="oem-tag">Schneider</span>
-              <span class="oem-tag">Eaton</span>
-              <span class="oem-tag">Mitsubishi</span>
-              <span class="oem-tag">L&amp;T</span>
-              <span class="oem-tag">Toshiba</span>
-              <span class="oem-tag">LG / LS</span>
+        <!-- Tier 1: Industrial / Infrastructure -->
+        <div class="tier-section-card">
+          <div class="tier-banner tier-1-banner">
+            <div>
+              <div class="tier-banner-title">TIER 1 &mdash; INDUSTRIAL &amp; INFRASTRUCTURE</div>
+              <div class="tier-banner-sub">Real Assets &bull; Physical Execution &bull; Sustainable Infrastructure</div>
             </div>
+            <div id="tier1ScopeTag" class="parent-badge" style="background: rgba(255,255,255,0.15); border-color: white; color: white;">
+              EPC, Contracting &amp; Specialised Asset Development
+            </div>
+          </div>
+          <div class="entity-cards-grid" id="tier1Grid">
+            <!-- Rendered by JS based on External vs Internal mode -->
+          </div>
+        </div>
+
+        <!-- Tier 2: Digital / Technology -->
+        <div class="tier-section-card">
+          <div class="tier-banner tier-2-banner">
+            <div>
+              <div class="tier-banner-title">TIER 2 &mdash; DIGITAL &amp; TECHNOLOGY</div>
+              <div class="tier-banner-sub">Intelligence &bull; Cybersecurity &bull; AI Software Platforms &bull; Clean Energy</div>
+            </div>
+            <div id="tier2ScopeTag" class="parent-badge" style="background: rgba(255,255,255,0.15); border-color: white; color: white;">
+              Software, Data, OT Cyber &amp; Sustainable Technologies
+            </div>
+          </div>
+          <div class="entity-cards-grid" id="tier2Grid">
+            <!-- Rendered by JS based on External vs Internal mode -->
+          </div>
+        </div>
+
+        <!-- Shared Project Pipeline (16 Sectors) -->
+        <div class="panel-box" style="margin-top: 24px;">
+          <div class="panel-header">
+            <div>
+              <h3 class="panel-title">Shared Project Pipeline &mdash; 16 Sectors</h3>
+              <p class="text-muted" style="font-size: 0.78rem;">Multi-Sector Opportunities &bull; Integrated Solutions &bull; Long-Term Value</p>
+            </div>
+            <span class="entity-code-badge">16 PIPELINE SECTORS</span>
+          </div>
+          <div class="sectors-grid" id="pipelineSectorsGrid">
+            <!-- 16 sectors rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Sectors for which AHFL is Licensed & Approved (10 Approved Sectors) -->
+        <div class="panel-box" style="margin-top: 24px;">
+          <div class="panel-header">
+            <div>
+              <h3 class="panel-title">Sectors for which AHFL is Licensed &amp; Approved</h3>
+              <p class="text-muted" style="font-size: 0.78rem;">Statutory Corporate Scope &bull; Multi-Jurisdiction Licensing</p>
+            </div>
+            <span class="entity-code-badge" style="border-color: var(--emerald); color: var(--emerald);">10 LICENSED SECTORS</span>
+          </div>
+          <div class="sectors-grid" id="licensedSectorsGrid">
+            <!-- 10 licensed sectors rendered by JS -->
+          </div>
+          <div class="text-muted" style="font-size: 0.74rem; margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border-subtle); line-height: 1.5;">
+            <strong>Institutional Charter Note:</strong> AHFL is engaged in the business of investing in, establishing, acquiring, holding and managing subsidiaries, projects and enterprises operating across strategic sectors including outer space and aerospace, technology and digital transformation, commercial and industrial activities, agriculture, oil and natural gas, sports infrastructure, water infrastructure, education and tourism.
           </div>
         </div>
       </section>
 
       <!-- ============================================
-           GEOGRAPHIC DELIVERY HUBS
+           DEDICATED PLATFORMS: DEM/DAAP, SOC/SIEM, HUMI-ID
       ============================================= -->
-      <section class="geo-section" id="geographies" aria-labelledby="geo-heading">
-        <div class="container">
-          <div class="section-header reveal">
-            <span class="section-eyebrow">Global Footprint</span>
-            <h2 class="section-title" id="geo-heading">Tri-Continent Delivery Engine</h2>
-            <p class="section-desc">HFL operates a globally integrated model where each hub provides a distinct
-              strategic advantage.</p>
-          </div>
-
-          <div class="geo-grid">
-            <div class="geo-card reveal">
-              <div class="geo-flag" aria-hidden="true">🇦🇪</div>
-              <h3 class="geo-name">UAE &amp; GCC</h3>
-              <p class="geo-role">Premium Hub</p>
-              <ul class="geo-list">
-                <li>Smart building digital mandates</li>
-                <li>Sovereign cyber programmes</li>
-                <li>Large infrastructure CAPEX</li>
-                <li>Regulatory Digital Twin acceptance</li>
-                <li>LLC / Free zone incorporation</li>
-              </ul>
-              <div class="geo-metric">Highest Margin</div>
-            </div>
-
-            <div class="geo-card geo-card--featured reveal">
-              <div class="geo-flag" aria-hidden="true">🇮🇳</div>
-              <h3 class="geo-name">India</h3>
-              <p class="geo-role">Volume &amp; Talent Hub</p>
-              <ul class="geo-list">
-                <li>Largest engineering talent base</li>
-                <li>High utilities digitization demand</li>
-                <li>Industrial upgrade pipeline</li>
-                <li>Smart campus &amp; EPC backlog</li>
-                <li>GBOS &amp; R&amp;D cost centres</li>
-              </ul>
-              <div class="geo-metric">Highest Volume</div>
-            </div>
-
-            <div class="geo-card reveal">
-              <div class="geo-flag" aria-hidden="true">🇨🇦</div>
-              <h3 class="geo-name">Canada</h3>
-              <p class="geo-role">Innovation Hub</p>
-              <ul class="geo-list">
-                <li>Aerospace &amp; space ecosystem</li>
-                <li>Nuclear digital twin (CANDU)</li>
-                <li>Oil &amp; utilities digital push</li>
-                <li>Government R&amp;D funding</li>
-                <li>Space communications networks</li>
-              </ul>
-              <div class="geo-metric">Sovereign Contracts</div>
-            </div>
-
-            <div class="geo-card reveal">
-              <div class="geo-flag" aria-hidden="true">🌐</div>
-              <h3 class="geo-name">Americas &amp; Europe</h3>
-              <p class="geo-role">Expansion Markets</p>
-              <ul class="geo-list">
-                <li>Industrial transformation (AI/ML)</li>
-                <li>SCADA cyber replacement (EU)</li>
-                <li>HVDC grid alliances (Korea/Japan)</li>
-                <li>Robotics partnerships (Japan)</li>
-                <li>AI &amp; cloud platforms (US)</li>
-              </ul>
-              <div class="geo-metric">High AI Value</div>
-            </div>
+      <section class="section-container" id="platforms">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Core Platforms Architecture</h2>
+            <p class="section-subtitle">DEM &amp; DAAP Digital Fabric, SOC &amp; SIEM Cybersecurity, and HUMI-ID Platform</p>
           </div>
         </div>
-      </section>
 
-      <!-- ============================================
-           ABOUT SECTION
-      ============================================= -->
-      <section class="about-section" id="about" aria-labelledby="about-heading">
-        <div class="container">
-          <div class="about-grid">
-            <div class="about-img-wrap reveal">
-              <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0n46xvmv_KcGK6Fx6fPJms-6-j--UG9vcXmXoNVJ4r4sd4gYD-F6eLjSIRt_piscc18otzLi1wHUJa3nHP09ZSpSMeCuBlM5qvq0ibA0NbcHOdKlizfJ5VRfmNw5x_vcBB13j6AP3zCaHIamx0OZZYAbLbHqKQ5PYARCOKn5qLXbu9waZpqY8Tl9CVrT1H60bkhOnOo-xQp0aVIPqjuMo6Hl-uZkVkNgyyDyzU2pAG53TblAIXk6TRqwGTvconZP2NLPe0z3EfLY"
-                alt="HFL corporate building reflecting innovation and precision" loading="lazy" />
+        <!-- Platform Tabs -->
+        <div class="panel-box">
+          <div class="view-toggle-btns" style="margin-bottom: 20px; width: fit-content;">
+            <button class="toggle-btn active" id="tabDemBtn" onclick="switchPlatformTab('dem')">DEM &amp; DAAP Fabric</button>
+            <button class="toggle-btn" id="tabSocBtn" onclick="switchPlatformTab('soc')">SOC &amp; SIEM Security</button>
+            <button class="toggle-btn" id="tabHumiBtn" onclick="switchPlatformTab('humi')">HUMI-ID Workforce</button>
+          </div>
+
+          <!-- Tab Content 1: DEM & DAAP -->
+          <div id="tabDemContent" class="platform-tab-pane">
+            <div class="grc-banner" style="background: rgba(2, 132, 199, 0.15);">
+              <div class="grc-title">DEM &amp; DAAP ARCHITECTURAL VISUAL (Digital Engineering &amp; Applications)</div>
+              <div class="grc-badges">
+                <span>Strategy &amp; Governance</span> &bull;
+                <span>BIM / GIS / LOD 500</span> &bull;
+                <span>Data Fabric</span> &bull;
+                <span>Digital Twins</span> &bull;
+                <span>Lifecycle Operations</span>
+              </div>
             </div>
-
-            <div class="about-text reveal">
-              <span class="section-eyebrow">Who We Are</span>
-              <h2 class="section-title" id="about-heading">About HFL</h2>
-              <p>
-                HFL is a global leader in high-tech critical infrastructure — building a full-stack digital + physical +
-                learning ecosystem to compete with players like BoschBB and Netcontrol. Our unique differentiator is
-                lifecycle ownership: from LOD 100 design through LOD 500 as-built, through AI-driven O&amp;M, through
-                decommissioning.
-              </p>
-              <p>
-                Structured across 11 nested competence areas spanning Grid Automation, EPC + Digital, Industrial
-                4.0/5.0, Cybersecurity, EdTech, Strategic Investments, Mobility, Space, Water, Oil &amp; Gas, and Retail
-                — HFL generates higher recurring revenue, maintainable digital twins, and predictive OPEX-friendly
-                ownership models for customers.
-              </p>
-              <div class="about-kpis">
-                <div class="kpi-item">
-                  <span class="kpi-num">15+</span>
-                  <span class="kpi-label">Countries Active</span>
+            <div class="two-col-grid" style="margin-top: 16px;">
+              <div>
+                <h4 style="color: var(--cyan); margin-bottom: 12px;">End-to-End Digital Engineering Flow</h4>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                  <div class="protection-card" style="border-left-color: #38bdf8;">
+                    <div class="protection-layer">Level 1: Governance</div>
+                    <div class="protection-title">Strategy &amp; Information Governance</div>
+                    <div class="protection-desc">Project digital charter, EIR/BEP standards, ISO 19650 compliance &amp; asset data dictionaries.</div>
+                  </div>
+                  <div class="protection-card" style="border-left-color: #0ea5e9;">
+                    <div class="protection-layer">Level 2: Digital Engineering</div>
+                    <div class="protection-title">BIM &bull; GIS &bull; LOD 100-500 Management</div>
+                    <div class="protection-desc">3D/4D/5D building information models, geospatial digital alignment &amp; EPC digital commissioning.</div>
+                  </div>
+                  <div class="protection-card" style="border-left-color: #0284c7;">
+                    <div class="protection-layer">Level 3: Data Fabric</div>
+                    <div class="protection-title">Data Fabric (SCADA / MES / IoT / ERP / CRM)</div>
+                    <div class="protection-desc">Real-time edge telemetry, OT-IT bridge, industrial message bus &amp; operational sensor aggregation.</div>
+                  </div>
+                  <div class="protection-card" style="border-left-color: #10b981;">
+                    <div class="protection-layer">Level 4: Twins &amp; AI</div>
+                    <div class="protection-title">Digital Twins &amp; AI/ML Predictive Intelligence</div>
+                    <div class="protection-desc">Living physical twin simulation, failure prediction, heat-rate optimisation &amp; autonomous dispatch.</div>
+                  </div>
                 </div>
-                <div class="kpi-item">
-                  <span class="kpi-num">11</span>
-                  <span class="kpi-label">Competence Areas</span>
-                </div>
-                <div class="kpi-item">
-                  <span class="kpi-num">$10B+</span>
-                  <span class="kpi-label">Valuation Target</span>
+              </div>
+              <div>
+                <h4 style="color: var(--cyan); margin-bottom: 12px;">WBS4DEM &amp; DAAP Capability Map</h4>
+                <div style="background: rgba(10, 19, 36, 0.7); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 0.76rem; line-height: 1.7; color: var(--text-secondary);">
+                  <div style="color: #fff; font-weight: 700;">DEM &amp; DAAP</div>
+                  <div>├── Electrification (Smart Grid, Substations, DERMS, Asset Intelligence)</div>
+                  <div>├── Digital Engineering (BIM, GIS, Digital Twin, LOD Management)</div>
+                  <div>├── Industry 4.0 / 5.0 (IoT Retrofit, Robotics, SCADA/MES, Vision AI)</div>
+                  <div>├── Cybersecurity (OT-SOC, Zero Trust, Incident Response)</div>
+                  <div>├── Mobility &amp; Surveillance (EV Fleet, ITS, Smart Corridors)</div>
+                  <div>├── Energy &amp; Storage (BESS, Hydrogen, Microgrids, ESCO)</div>
+                  <div>├── Water Infrastructure (Desalination, SCADA Distribution)</div>
+                  <div>└── Education &amp; Workforce (Virtual Labs, Digital Credentials)</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- ============================================
-           CTA SECTION
-      ============================================= -->
-      <section class="cta-section" id="contact" aria-labelledby="cta-heading">
-        <div class="container">
-          <div class="cta-card reveal">
-            <div class="cta-content">
-              <span class="cta-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M13 2L4.09 12.26a1 1 0 000 1.49L13 22V2z" />
-                </svg>
-                Get Started
-              </span>
-              <h2 class="cta-title" id="cta-heading">Ready to automate your future?</h2>
-              <p class="cta-desc">
-                Connect with our technical consultants to discover how HFL can transform your critical infrastructure
-                today.
-              </p>
-              <a href="mailto:contact@hfl.com" class="btn-cta">
-                Contact Our Team
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
+          <!-- Tab Content 2: SOC & SIEM -->
+          <div id="tabSocContent" class="platform-tab-pane" style="display: none;">
+            <div class="grc-banner" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4);">
+              <div class="grc-title" style="color: var(--emerald);">ENTERPRISE SECURITY FABRIC (SOC &amp; SIEM)</div>
+              <div class="grc-badges">
+                <span>Threat Intelligence</span> &bull;
+                <span>OT / ICS Protection</span> &bull;
+                <span>Zero Trust</span> &bull;
+                <span>Compliance Audits</span>
+              </div>
+            </div>
+            <div class="two-col-grid" style="margin-top: 16px;">
+              <div>
+                <h4 style="color: var(--emerald); margin-bottom: 12px;">Security Fabric Architecture Flow</h4>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                  <div class="protection-card" style="border-left-color: var(--emerald);">
+                    <div class="protection-layer">Ingestion Layer</div>
+                    <div class="protection-title">Enterprise &amp; Operational Systems</div>
+                    <div class="protection-desc">Endpoints, Cloud Apps, Firewalls, Servers, ERP/CRM, SCADA, OT PLCs &amp; Industrial IoT controllers.</div>
+                  </div>
+                  <div class="protection-card" style="border-left-color: var(--cyan);">
+                    <div class="protection-layer">Intelligence Layer</div>
+                    <div class="protection-title">Central SIEM Platform</div>
+                    <div class="protection-desc">Event collection, correlation engine, behavioural anomaly analytics &amp; automated alert routing.</div>
+                  </div>
+                  <div class="protection-card" style="border-left-color: var(--purple);">
+                    <div class="protection-layer">Operational Layer</div>
+                    <div class="protection-title">24/7 SOC Operations Centre</div>
+                    <div class="protection-desc">Continuous monitoring, proactive threat hunting, incident triage, containment &amp; forensic response.</div>
+                  </div>
+                  <div class="protection-card" style="border-left-color: var(--amber);">
+                    <div class="protection-layer">Assurance Layer</div>
+                    <div class="protection-title">Governance, Audit &amp; Compliance</div>
+                    <div class="protection-desc">NERC-CIP, IEC 62443, ISO 27001 regulatory audits, board risk dashboards &amp; resilience metrics.</div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 style="color: var(--emerald); margin-bottom: 12px;">Five-Phase SOC/SIEM Maturity Roadmap</h4>
+                <div style="background: rgba(10, 19, 36, 0.7); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 10px;">
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
+                    <strong>Phase 1: Assessment &amp; Discovery</strong>
+                    <span class="text-muted">Asset mapping &amp; gap audit</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
+                    <strong>Phase 2: Security Architecture</strong>
+                    <span class="text-muted">Network zoning &amp; perimeter design</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
+                    <strong>Phase 3: SIEM Deployment</strong>
+                    <span class="text-muted">Telemetry ingest &amp; rule engines</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
+                    <strong>Phase 4: SOC Enablement</strong>
+                    <span class="text-muted">24/7 L1-L3 analyst operations</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
+                    <strong>Phase 5: Continuous Improvement</strong>
+                    <span class="text-muted">Automated SOAR &amp; red-teaming</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content 3: HUMI-ID -->
+          <div id="tabHumiContent" class="platform-tab-pane" style="display: none;">
+            <div class="grc-banner" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.4);">
+              <div class="grc-title" style="color: #c084fc;">HUMI-ID (Human Infrastructure Identity Platform)</div>
+              <div class="grc-badges">
+                <span>Not HR &mdash; Strategic Workforce Operating Platform</span> &bull;
+                <span>Skills Passport</span> &bull;
+                <span>Blockchain Verified</span>
+              </div>
+            </div>
+            <div class="two-col-grid" style="margin-top: 16px;">
+              <div>
+                <h4 style="color: #c084fc; margin-bottom: 12px;">8-Stage Workforce Operating Lifecycle</h4>
+                <div class="protection-grid" style="grid-template-columns: 1fr 1fr; margin-top: 0;">
+                  <div class="protection-card" style="border-left-color: #c084fc;">
+                    <div class="protection-layer">Stage 1 &amp; 2</div>
+                    <div class="protection-title">Train &amp; Certify</div>
+                    <div class="protection-desc">Academy curriculums, virtual twins, VARK simulators.</div>
+                  </div>
+                  <div class="protection-card" style="border-left-color: #a855f7;">
+                    <div class="protection-layer">Stage 3 &amp; 4</div>
+                    <div class="protection-title">Accredit &amp; Verify</div>
+                    <div class="protection-desc">Cryptographic wallet, blockchain competency registry.</div>
+                  </div>
+                  <div class="protection-card" style="border-left-color: #8b5cf6;">
+                    <div class="protection-layer">Stage 5 &amp; 6</div>
+                    <div class="protection-title">Deploy &amp; Work</div>
+                    <div class="protection-desc">Automated matching to projects, digital site-access logs.</div>
+                  </div>
+                  <div class="protection-card" style="border-left-color: #6366f1;">
+                    <div class="protection-layer">Stage 7 &amp; 8</div>
+                    <div class="protection-title">Earn &amp; Upskill</div>
+                    <div class="protection-desc">HUMI Wallet credits, ongoing micro-degrees &amp; promotion.</div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 style="color: #c084fc; margin-bottom: 12px;">HUMI-ID Core Data Structure</h4>
+                <div style="background: rgba(10, 19, 36, 0.7); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); font-size: 0.8rem; line-height: 1.6;">
+                  <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 6px; margin-bottom: 8px;">
+                    <span class="text-muted">Unique ID</span>
+                    <strong style="font-family: var(--font-mono); color: var(--cyan);">HUMI-IND-BLR-0002871</strong>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                    <span class="text-muted">Role &amp; Competency</span>
+                    <span>Grid Automation &bull; SCADA &bull; Cyber</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                    <span class="text-muted">Completed Deployments</span>
+                    <span>6 Major Substation Handouts</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                    <span class="text-muted">Projects Associated</span>
+                    <span>12 Critical Infrastructure Projects</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                    <span class="text-muted">Verified Performance</span>
+                    <span style="color: var(--emerald); font-weight: 700;">4.8 / 5.0 (Supervisor Signed)</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--border-subtle);">
+                    <span class="text-muted">Workforce Efficiency</span>
+                    <span style="color: var(--cyan); font-weight: 600;">-30% Deployment Time</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ============================================
+           15-YEAR STRATEGIC INTELLIGENCE DASHBOARD
+      ============================================= -->
+      <section class="section-container" id="intelligence">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">15-Year Strategic Intelligence Model (2026&ndash;2040)</h2>
+            <p class="section-subtitle">Multi-Currency &bull; Multi-Scenario &bull; Valuation &amp; Downside Protection</p>
+          </div>
+        </div>
+
+        <div class="intelligence-dashboard">
+          <!-- Scenario & Currency Controls -->
+          <div class="scenario-controls">
+            <div class="scenario-pills">
+              <span class="text-muted" style="font-size: 0.8rem; align-self: center; margin-right: 4px;">Scenario:</span>
+              <button class="scenario-pill downside" id="scenDown" onclick="setScenario('downside')">
+                🔴 Downside (Execution Delays)
+              </button>
+              <button class="scenario-pill base active" id="scenBase" onclick="setScenario('base')">
+                🔵 Base Case (Commercial Schedules)
+              </button>
+              <button class="scenario-pill upside" id="scenUp" onclick="setScenario('upside')">
+                🟢 Upside (AI &amp; EaaS Acceleration)
+              </button>
+            </div>
+
+            <div class="currency-pills">
+              <span class="text-muted" style="font-size: 0.74rem; align-self: center; padding-left: 6px; margin-right: 4px;">Currency:</span>
+              <button class="currency-btn active" onclick="setCurrency('USD')">USD</button>
+              <button class="currency-btn" onclick="setCurrency('AED')">AED</button>
+              <button class="currency-btn" onclick="setCurrency('INR')">INR (₹ Cr)</button>
+              <button class="currency-btn" onclick="setCurrency('CAD')">CAD</button>
+              <button class="currency-btn" onclick="setCurrency('EUR')">EUR</button>
+              <button class="currency-btn" onclick="setCurrency('GBP')">GBP</button>
+            </div>
+          </div>
+
+          <!-- 4 Horizon Cards -->
+          <div class="trajectory-cards" id="trajectoryCards">
+            <!-- Rendered by JS based on Scenario & Currency -->
+          </div>
+
+          <!-- Key Financial Highlights Grid -->
+          <div class="two-col-grid" style="margin-top: 0; margin-bottom: 24px;">
+            <div class="trajectory-card">
+              <div class="trajectory-year">15-Year EBITDA Target (Year 15)</div>
+              <div class="trajectory-rev" id="ebitdaDisplay" style="color: var(--emerald);">USD 1.95B</div>
+              <div class="trajectory-ebitda" id="ebitdaMarginDisplay">Margin: 24.4% &bull; Base Case</div>
+            </div>
+            <div class="trajectory-card">
+              <div class="trajectory-year">15-Year PAT Target (Year 15)</div>
+              <div class="trajectory-rev" id="patDisplay" style="color: var(--cyan);">USD 1.35B</div>
+              <div class="trajectory-ebitda" id="valDisplay">Implied Enterprise Value: 12x EBITDA (USD 23.4B)</div>
+            </div>
+          </div>
+
+          <!-- Downside Protection Framework -->
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 20px;">
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
+              5-Layer Downside Protection Framework
+            </h4>
+            <p class="text-muted" style="font-size: 0.78rem; margin-bottom: 16px;">
+              Institutional structural mitigations protecting margins, capital, and delivery against downside shocks.
+            </p>
+            <div class="protection-grid">
+              <div class="protection-card">
+                <div class="protection-layer">Layer 1</div>
+                <div class="protection-title">Revenue Diversification</div>
+                <div class="protection-desc">Trading &bull; Distribution &bull; Engineering &bull; Services &bull; Manufacturing. Cash flow generates prior to factory completion.</div>
+              </div>
+              <div class="protection-card">
+                <div class="protection-layer">Layer 2</div>
+                <div class="protection-title">Geographic Hedging</div>
+                <div class="protection-desc">UAE, India, Saudi Arabia, Canada &amp; USA distribution removes single-country or single-currency dependence.</div>
+              </div>
+              <div class="protection-card">
+                <div class="protection-layer">Layer 3</div>
+                <div class="protection-title">Recurring Protection</div>
+                <div class="protection-desc">Target 70% recurring revenue by 2040 via O&amp;M (20%), ESCO (20%), EaaS (20%), and Digital Platforms (10%).</div>
+              </div>
+              <div class="protection-card">
+                <div class="protection-layer">Layer 4</div>
+                <div class="protection-title">Capital Ring-Fencing</div>
+                <div class="protection-desc">Project-level SPVs, non-recourse platform debt, and local sovereign fund participation insulate the parent balance sheet.</div>
+              </div>
+              <div class="protection-card">
+                <div class="protection-layer">Layer 5</div>
+                <div class="protection-title">HUMI-ID Workforce</div>
+                <div class="protection-desc">Certified, blockchain-verified workforce cuts deployment time by 30% and reduces O&amp;M lifecycle costs by 15-25%.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           ROADMAP
+      ============================================= -->
+      <section class="section-container" id="roadmap">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Strategic Multi-Horizon Roadmap</h2>
+            <p class="section-subtitle">From Foundation to Global Scaled Leadership (2025&ndash;2029+)</p>
+          </div>
+        </div>
+
+        <div class="panel-box">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div class="trajectory-card" style="border-top: 3px solid #0284c7;">
+              <div class="entity-code-badge">2025</div>
+              <div class="entity-name">Foundation &amp; Charters</div>
+              <div class="entity-role">Entity formation across Canada, UAE, India. Statutory licenses, GRC baseline, initial partner MOUs.</div>
+            </div>
+            <div class="trajectory-card" style="border-top: 3px solid #00f2fe;">
+              <div class="entity-code-badge">2026</div>
+              <div class="entity-name">Platform Build &amp; ERGI</div>
+              <div class="entity-role">DEM &amp; DAAP core rollout, OT-SOC architecture, AMS 24-month ERGI launch with 36 Trade Houses.</div>
+            </div>
+            <div class="trajectory-card" style="border-top: 3px solid #10b981;">
+              <div class="entity-code-badge">2027</div>
+              <div class="entity-name">Scale &amp; Integration</div>
+              <div class="entity-role">Full System Integrator execution across smart grids, HUMI-ID workforce marketplace deployment.</div>
+            </div>
+            <div class="trajectory-card" style="border-top: 3px solid #f59e0b;">
+              <div class="entity-code-badge">2028</div>
+              <div class="entity-name">Commercial Acceleration</div>
+              <div class="entity-role">First-wave manufacturing plant commissionings, high-volume semiconductor &amp; PCB assembly.</div>
+            </div>
+            <div class="trajectory-card" style="border-top: 3px solid #a855f7;">
+              <div class="entity-code-badge">2029+</div>
+              <div class="entity-name">Global Expansion</div>
+              <div class="entity-role">Mega-project execution in Saudi Arabia, EU/UK corridors, ESCO/EaaS recurring revenue maturity.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           AMS SUB-DOMAIN CALLOUT (PARENT-TO-CHILD PORTAL)
+      ============================================= -->
+      <section class="ams-subdomain-cta-section" id="ams-portal-link">
+        <div class="ams-cta-content">
+          <span class="ams-subdomain-tag">Sub-Domain Portal &bull; Advanced Electronics</span>
+          <h2 class="ams-cta-title">AMS &mdash; Advanced Electronics Manufacturing Solutions</h2>
+          <p class="ams-cta-desc">
+            AHFL is the parent portal and institutional holding partner for AMS &mdash; India's Semiconductor &amp; Advanced Electronics Ecosystem Partner. Explore the 24-Month ERGI Commercial Roadmap, 28 States &amp; 36 Trade Houses network, 12-Leader Execution Architecture, and the Odisha Industrial Strategy.
+          </p>
+        </div>
+        <div>
+          <a href="ams/index.html" class="ams-cta-btn">
+            <span>Explore AMS Sub-Domain Portal (ams.ahfl.com)</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </section>
     </main>
 
     <!-- ============================================
          FOOTER
     ============================================= -->
-    <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <!-- Brand col -->
-          <div class="footer-brand">
-            <div class="footer-logo">
-              <div class="footer-logo-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 3v4M12 17v4M3 12h4m10 0h4M6.34 6.34l2.83 2.83M14.83 14.83l2.83 2.83M6.34 17.66l2.83-2.83M14.83 9.17l2.83-2.83"
-                    stroke="white" stroke-width="2" stroke-linecap="round" fill="none" />
-                </svg>
-              </div>
-              <span class="footer-wordmark">HFL</span>
-            </div>
-            <p class="footer-tagline">Innovating the world's most critical infrastructures with precision and digital
-              intelligence.</p>
-            <div class="footer-socials">
-              <!-- LinkedIn -->
-              <a href="#" class="social-link" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" />
-                </svg>
-              </a>
-              <!-- Globe -->
-              <a href="#" class="social-link" aria-label="Website">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="2" y1="12" x2="22" y2="12" />
-                  <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
-                </svg>
-              </a>
-              <!-- Email -->
-              <a href="mailto:contact@hfl.com" class="social-link" aria-label="Email">
-                <svg viewBox="0 0 24 24">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Sectors -->
-          <div class="footer-col">
-            <h4>Sectors</h4>
-            <ul>
-              <li><a href="#pillars">Grid Automation</a></li>
-              <li><a href="#pillars">Smart Cities</a></li>
-              <li><a href="#pillars">Space Tech</a></li>
-              <li><a href="#pillars">Digital Twins</a></li>
-              <li><a href="#pillars">EdTech</a></li>
-            </ul>
-          </div>
-
-          <!-- Company -->
-          <div class="footer-col">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#about">Careers</a></li>
-              <li><a href="#about">Sustainability</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact -->
-          <div class="footer-col">
-            <h4>Get In Touch</h4>
-            <div class="footer-contact">
-              <div class="contact-item">
-                <svg viewBox="0 0 24 24">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                <span>100 Innovation Plaza, Tech District<br />London, United Kingdom</span>
-              </div>
-              <div class="contact-item">
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18L5.08 1a2 2 0 011.94 1.46 12.86 12.86 0 00.7 2.81 2 2 0 01-.45 2.11L5.91 8.69a16 16 0 006.37 6.37l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-                </svg>
-                <span>+44 20 7946 0123</span>
-              </div>
-            </div>
-          </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h4>AHFL GLOBAL ENTERPRISE ECOSYSTEM</h4>
+          <p class="footer-tagline">
+            "Engineering Trusted Ecosystems for a Safer, Smarter and Sustainable World"
+            <br /><br />
+            <strong>Two Jurisdictions. One Enterprise Ecosystem.</strong>
+            <br />
+            Canada 🇨🇦 &bull; India 🇮🇳 &bull; UAE 🇦🇪 &bull; USA 🇺🇸 &bull; Saudi Arabia 🇸🇦
+          </p>
         </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2024 HFL Engineering Solutions. All rights reserved.</p>
-          <div class="footer-legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-          </div>
+        <div class="footer-col">
+          <h5>Core Platforms</h5>
+          <ul class="footer-links">
+            <li><a href="#platforms" onclick="switchPlatformTab('dem')">DEM &amp; DAAP Platform</a></li>
+            <li><a href="#platforms" onclick="switchPlatformTab('soc')">SOC &amp; SIEM Fabric</a></li>
+            <li><a href="#platforms" onclick="switchPlatformTab('humi')">HUMI-ID Workforce</a></li>
+            <li><a href="#architecture">System Integrator (S.I.)</a></li>
+            <li><a href="#architecture">EPICC Contracting</a></li>
+          </ul>
         </div>
+        <div class="footer-col">
+          <h5>Sub-Domains</h5>
+          <ul class="footer-links">
+            <li><a href="ams/index.html"><strong>ams.ahfl.com (AMS Portal)</strong></a></li>
+            <li><a href="ams/index.html#external">AMS External Partner Ecosystem</a></li>
+            <li><a href="ams/index.html#internal">AMS 12-Leader Intranet</a></li>
+            <li><a href="ams/index.html#odisha">Odisha 26-Chapter Strategy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Jurisdictions</h5>
+          <ul class="footer-links">
+            <li><a href="#hubs" onclick="selectHub('uae')">🇦🇪 UAE Investment Hub</a></li>
+            <li><a href="#hubs" onclick="selectHub('canada')">🇨🇦 Canada AI &amp; Holding Hub</a></li>
+            <li><a href="#hubs" onclick="selectHub('india')">🇮🇳 India Manufacturing Hub</a></li>
+            <li><a href="#hubs" onclick="selectHub('usa')">🇺🇸 USA Innovation Hub</a></li>
+            <li><a href="#hubs" onclick="selectHub('saudi')">🇸🇦 Saudi Mega-Projects Hub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 AJAN HFL GLOBAL INVESTMENT (AHFL). All rights reserved.</div>
+        <div>CONFIDENTIAL &bull; INSTITUTIONAL REVENUE INTELLIGENCE &bull; SYSTEM ARCHITECTURE</div>
       </div>
     </footer>
 
-  </div><!-- /wrapper -->
-
-  <!-- ============================================
-       BOTTOM MOBILE NAV
-  ============================================= -->
-  <nav class="bottom-nav" aria-label="Mobile bottom navigation">
-    <div class="bottom-nav-items">
-      <a href="#home" class="bottom-nav-item active" id="bnav-home">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-          <polyline points="9 22 9 12 15 12 15 22" />
-        </svg>
-        Home
-      </a>
-      <a href="#pillars" class="bottom-nav-item" id="bnav-pillars">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="3" y="3" width="7" height="7" rx="1" />
-          <rect x="14" y="3" width="7" height="7" rx="1" />
-          <rect x="3" y="14" width="7" height="7" rx="1" />
-          <rect x="14" y="14" width="7" height="7" rx="1" />
-        </svg>
-        Pillars
-      </a>
-      <a href="#about" class="bottom-nav-item" id="bnav-about">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M12 8v4M12 16h.01" />
-        </svg>
-        About
-      </a>
-      <a href="#contact" class="bottom-nav-item" id="bnav-contact">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-          <polyline points="22,6 12,13 2,6" />
-        </svg>
-        Contact
-      </a>
-    </div>
-  </nav>
-
-  <!-- ============================================
-       PILLAR DETAIL MODAL
-  ============================================= -->
-  <div class="modal-overlay" id="pillarModal" role="dialog" aria-modal="true" aria-labelledby="modal-title"
-    aria-hidden="true">
-    <div class="modal-box">
-      <div class="modal-icon" id="modal-icon" aria-hidden="true">
-        <!-- icon injected by JS -->
+    <!-- Modal for step/platform deep-dive -->
+    <div class="modal-overlay" id="detailModal" onclick="closeModal(event)">
+      <div class="modal-box" id="modalContentBox" onclick="event.stopPropagation()">
+        <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+        <div id="modalBody"></div>
       </div>
-      <h3 class="modal-title" id="modal-title"></h3>
-      <p class="modal-desc" id="modal-desc"></p>
-      <div class="modal-tags" id="modal-tags" aria-label="Capability tags"></div>
-      <button class="modal-close" id="modalCloseBtn">Close</button>
     </div>
+
   </div>
 
-  <!-- JS -->
+  <!-- Main JavaScript -->
   <script src="main.js"></script>
 </body>
 
