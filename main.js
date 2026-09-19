@@ -346,7 +346,7 @@ function selectHub(hubId) {
 
   // Update hero elements
   document.getElementById('heroJurFlag').textContent = hub.flag;
-  document.getElementById('heroJurTitle').textContent = `${hub.name} &bull; ${hub.badge}`;
+  document.getElementById('heroJurTitle').textContent = `${hub.name} ➢ ${hub.badge}`;
   document.getElementById('heroTagline').textContent = hub.heroTagline;
   document.getElementById('heroSubtitle').innerHTML = `
     ${hub.heroSub}
