@@ -342,7 +342,10 @@ function selectHub(hubId) {
   // Update active state in cards
   document.querySelectorAll('.hub-card').forEach(card => card.classList.remove('active'));
   const activeCard = Array.from(document.querySelectorAll('.hub-card')).find(c => c.textContent.includes(hub.name));
-  if (activeCard) activeCard.classList.add('active');
+  if (activeCard) {
+    activeCard.classList.add('active');
+    activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
 
   // Update hero elements
   document.getElementById('heroJurFlag').textContent = hub.flag;
@@ -738,7 +741,43 @@ function updateThemeIcon(theme) {
 function initMobileMenu() {
   const btn = document.getElementById('hamburgerBtn');
   const links = document.getElementById('navLinks');
-  btn?.addEventListener('click', () => {
-    links?.classList.toggle('open');
+  if (!btn || !links) return;
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = links.classList.toggle('open');
+    btn.classList.toggle('active', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // Close when clicking any nav link
+  links.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      links.classList.remove('open');
+      btn.classList.remove('active');
+      document.body.classList.remove('nav-open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (links.classList.contains('open') && !links.contains(e.target) && !btn.contains(e.target)) {
+      links.classList.remove('open');
+      btn.classList.remove('active');
+      document.body.classList.remove('nav-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
+      links.classList.remove('open');
+      btn.classList.remove('active');
+      document.body.classList.remove('nav-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
   });
 }
