@@ -119,7 +119,7 @@ const GLOBAL_HUBS = [
     currency: 'INR',
     badge: 'Delivery & Engineering Core',
     heroTagline: 'Delivery Engine, High-Tech Manufacturing & Workforce',
-    heroSub: 'Delivery & Operations &bull; MFAP &bull; AMS Semiconductor &bull; DEM & DAAP &bull; HUMI-ID Academies &bull; MSME Integration',
+    heroSub: 'Delivery & Operations &bull; MFAP &bull; Semiconductor & Advanced Electronics &bull; DEM & DAAP &bull; HUMI-ID Academies &bull; MSME Integration',
     metrics: [
       { val: '₹75,012 Cr', label: '15-Year Revenue Target', sub: 'USD 7.98B Consolidated (₹94/USD)', glow: 'glow-cyan' },
       { val: '₹18,330 Cr', label: '15-Year EBITDA Target', sub: '₹12,690 Cr 15-Year PAT', glow: 'glow-emerald' },
@@ -346,7 +346,7 @@ function selectHub(hubId) {
 
   // Update hero elements
   document.getElementById('heroJurFlag').textContent = hub.flag;
-  document.getElementById('heroJurTitle').textContent = `${hub.name} &bull; ${hub.badge}`;
+  document.getElementById('heroJurTitle').textContent = `${hub.name} • ${hub.badge}`;
   document.getElementById('heroTagline').textContent = hub.heroTagline;
   document.getElementById('heroSubtitle').innerHTML = `
     ${hub.heroSub}
@@ -551,7 +551,7 @@ function updateIntelligenceDashboard() {
 
   if (ebitdaEl) ebitdaEl.textContent = formatVal(scen.ebitdaY15);
   if (ebitdaMarginEl) {
-    ebitdaMarginEl.textContent = `Margin: ${(scen.ebitdaMarginY15 * 100).toFixed(1)}% &bull; ${scen.name}`;
+    ebitdaMarginEl.textContent = `Margin: ${(scen.ebitdaMarginY15 * 100).toFixed(1)}% • ${scen.name}`;
   }
 
   if (patEl) patEl.textContent = formatVal(scen.patY15);
