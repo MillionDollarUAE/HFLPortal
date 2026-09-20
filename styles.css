@@ -879,6 +879,10 @@ body.nav-open {
 }
 
 /* View Mode Switcher (External vs Internal) */
+.nav-actions .view-mode-pill {
+  display: none !important;
+}
+
 .view-mode-pill {
   display: inline-flex;
   background: var(--bg-card);
