@@ -76,7 +76,7 @@ const GLOBAL_HUBS = [
       { val: 'USD 7.98B', label: '15-Year Revenue Target', sub: 'Base Case (2040)', glow: 'glow-cyan' },
       { val: 'USD 1.95B', label: '15-Year EBITDA', sub: '24.4% Margin (USD 1.35B PAT)', glow: 'glow-emerald' },
       { val: 'USD 10B+', label: 'Potential Enterprise Value', sub: '12x EBITDA Multiplier', glow: 'glow-amber' },
-      { val: '2 + 3 Hubs', label: 'Global Footprint', sub: 'Canada & India + UAE, USA, Saudi', glow: '' }
+      { val: '2 + 3 Hubs', label: 'Global Footprint', sub: 'UAE & India + Canada, USA, Saudi', glow: '' }
     ]
   },
   {
